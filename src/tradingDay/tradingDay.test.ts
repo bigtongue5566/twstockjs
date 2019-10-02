@@ -12,11 +12,11 @@ test('checkTradingDay test', async t => {
   const tradingDayResult = await checkTradingDay(tradingDayDate);
   // assert
   t.false(holidayResult.isTradingDay);
-  t.true(holidayResult.des != null);
+  t.true(holidayResult.des !== '');
   t.false(weekendResult.isTradingDay);
-  t.true(weekendResult.des != null);
+  t.true(weekendResult.des !== '');
   t.true(tradingDayResult.isTradingDay);
-  t.true(tradingDayResult.des === null);
+  t.true(tradingDayResult.des === '');
 });
 
 test('isTradingDay test', async t => {

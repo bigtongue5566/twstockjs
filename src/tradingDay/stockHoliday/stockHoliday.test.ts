@@ -27,8 +27,8 @@ test('test checkHoliday', async t => {
   const tradingDayResult = await checkHoliday(tradingDayDate);
   // assert
   t.true(holidayResult.isHoliday);
-  t.true(holidayResult.des != null);
+  t.true(holidayResult.des !== '');
   t.false(tradingDayResult.isHoliday);
-  t.true(tradingDayResult.des === null);
+  t.true(tradingDayResult.des === '');
   await t.throwsAsync(checkHoliday(invalidDate), { instanceOf: Error, message: 'invalid string' });
 });
