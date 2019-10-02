@@ -1,5 +1,8 @@
 # twstockjs
 
+![npm](https://img.shields.io/npm/v/twstockjs)
+![Travis (.org)](https://img.shields.io/travis/bigtongue5566/twstockjs)
+
 台股資料library
 
 ## Install

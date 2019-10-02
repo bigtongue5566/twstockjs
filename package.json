@@ -11,10 +11,9 @@
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
-    "coverage": "nyc ava",
+    "coverage": "nyc ava | coveralls",
     "commit": "git-cz",
-    "release": "standard-version",
-    "publish": "git push --follow-tags origin master && npm publish"
+    "release": "standard-version"
   },
   "config": {
     "commitizen": {
@@ -45,7 +44,8 @@
     ],
     "reporter": [
       "html",
-      "text-summary"
+      "text-summary",
+      "text-lcov"
     ],
     "sourceMap": true,
     "instrument": true
@@ -67,6 +67,7 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "commitizen": "^4.0.3",
+    "coveralls": "^3.0.6",
     "cz-conventional-changelog": "^3.0.2",
     "nodemon": "^1.19.2",
     "nyc": "^14.1.1",
