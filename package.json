@@ -1,6 +1,6 @@
 {
   "name": "twstockjs",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Taiwan stock library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -14,7 +14,7 @@
     "coverage": "nyc ava",
     "commit": "git-cz",
     "release": "standard-version",
-    "publish":"git push --follow-tags origin master && npm publish"
+    "publish": "git push --follow-tags origin master && npm publish"
   },
   "config": {
     "commitizen": {
