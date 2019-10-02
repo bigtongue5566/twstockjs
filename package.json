@@ -1,6 +1,6 @@
 {
   "name": "twstockjs",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Taiwan stock library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,7 +12,8 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "coverage": "nyc ava",
-    "commit": "git-cz"
+    "commit": "git-cz",
+    "release": "standard-version"
   },
   "config": {
     "commitizen": {
@@ -69,6 +70,7 @@
     "nodemon": "^1.19.2",
     "nyc": "^14.1.1",
     "prettier": "^1.18.2",
+    "standard-version": "^7.0.0",
     "ts-node": "^8.4.1",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
