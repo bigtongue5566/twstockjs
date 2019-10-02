@@ -1,5 +1,7 @@
 # twstockjs
 
+[![Join the chat at https://gitter.im/twstockjs/community](https://badges.gitter.im/twstockjs/community.svg)](https://gitter.im/twstockjs/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 台股資料library
 
 ## Install
