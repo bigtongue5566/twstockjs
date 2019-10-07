@@ -26,7 +26,7 @@ async function getStockHolidays(year: number) {
   });
   const dom = new JSDOM(res.data);
   const tableTitle = dom.window.document.querySelector('.box-cell > h2') as Element;
-  const title = tableTitle.textContent as string
+  const title = tableTitle.textContent as string;
   const searchIndex = title.indexOf(localYear.toString());
   if (searchIndex === -1) {
     throw new Error('no this year stock holiday data');
@@ -69,7 +69,7 @@ export async function checkHoliday(date: string) {
   if (holiday) {
     return {
       des: holiday.des,
-      isHoliday: true, 
+      isHoliday: true,
     } as CheckHoliday;
   } else {
     return {

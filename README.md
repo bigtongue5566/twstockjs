@@ -31,7 +31,7 @@ return promise\<TradingDay\>
 
 #### TradingDay
 
-```javascript
+```json
 {
   isTradingDay: boolean,
   // The description of the date which isTradingDay is false
