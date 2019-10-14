@@ -25,15 +25,15 @@ const {Basic,TradingDay} = require('twstockjs');
 
 #### getTseList()
 
-return IStock[]
+return Pomise\<IStock[]\>
 
 #### getOtcList()
 
-return IStock[]
+return Pomise\<IStock[]\>
 
 #### getTseAndOtcList()
 
-return IStock[]
+return Pomise\<IStock[]\>
 
 ### TradingDay
 
@@ -49,7 +49,7 @@ return promise\<ITradingDay\>
 
 ### IStock
 
-```json
+```
 {
   // stock code
   code: string,
@@ -62,7 +62,7 @@ return promise\<ITradingDay\>
 
 ### ITradingDay
 
-```json
+```
 {
   // If the date is a Trading Day
   isTradingDay: boolean,
