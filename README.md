@@ -1,9 +1,9 @@
 # twstockjs
 
-![npm](https://img.shields.io/npm/v/twstockjs)
-![Travis (.org)](https://img.shields.io/travis/bigtongue5566/twstockjs)
-![Coveralls github](https://img.shields.io/coveralls/github/bigtongue5566/twstockjs)
-![Gitter](https://img.shields.io/gitter/room/bigtongue5566/twstockjs)
+[![npm](https://img.shields.io/npm/v/twstockjs)](https://www.npmjs.com/package/twstockjs)
+[![Travis (.org)](https://img.shields.io/travis/bigtongue5566/twstockjs)](https://travis-ci.org/bigtongue5566/twstockjs)
+[![Coveralls github](https://img.shields.io/coveralls/github/bigtongue5566/twstockjs)](https://coveralls.io/github/bigtongue5566/twstockjs)
+[![Gitter](https://img.shields.io/gitter/room/bigtongue5566/twstockjs)](https://gitter.im/twstockjs/community)
 
 台股資料library
 
