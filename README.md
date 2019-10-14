@@ -16,37 +16,57 @@ npm i twstockjs
 ## Usage
 
 ```javascript
-const twstockjs = require('twstockjs');
+const {Basic,TradingDay} = require('twstockjs');
 ```
 
 ## API
 
-### getTseList()
+### Basic
+
+#### getTseList()
 
 return IStock[]
 
-### getOtcList()
+#### getOtcList()
 
 return IStock[]
 
-### getTseAndOtcList()
+#### getTseAndOtcList()
 
 return IStock[]
 
-### isTradingDay('yyyy-mm-dd')
+### TradingDay
+
+#### isTradingDay('yyyy-mm-dd')
 
 return promise\<boolean\>
 
-### checkTradingDay('yyyy-mm-dd')
+#### checkTradingDay('yyyy-mm-dd')
 
-return promise\<TradingDay\>
+return promise\<ITradingDay\>
 
-#### TradingDay
+## Interface
+
+### IStock
 
 ```json
 {
+  // stock code
+  code: string,
+  // stock name
+  name: string,
+  // stock type 'tse' or 'otc'
+  type: string
+}
+```
+
+### ITradingDay
+
+```json
+{
+  // If the date is a Trading Day
   isTradingDay: boolean,
-  // The description of the date which isTradingDay is false
+  // The description of the date
   des: string
 }
 ```
