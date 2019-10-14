@@ -21,6 +21,18 @@ const twstockjs = require('twstockjs');
 
 ## API
 
+### getTseList()
+
+return IStock[]
+
+### getOtcList()
+
+return IStock[]
+
+### getTseAndOtcList()
+
+return IStock[]
+
 ### isTradingDay('yyyy-mm-dd')
 
 return promise\<boolean\>
@@ -41,6 +53,8 @@ return promise\<TradingDay\>
 
 ## TODO
 
-- [ ] 上市櫃清單
+- [x] 上市櫃清單
 
 - [ ] 公司基本資料
+
+- [ ] 即時資料
