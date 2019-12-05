@@ -5,12 +5,12 @@ import axios from 'axios';
 import jsdom from 'jsdom';
 const { JSDOM } = jsdom;
 
-interface Holiday {
+interface IHoliday {
   date: dayjs.Dayjs;
   des: string;
 }
 
-interface CheckHoliday {
+interface ICheckHoliday {
   isHoliday: boolean;
   des: string;
 }
@@ -33,20 +33,20 @@ async function getStockHolidays(year: number) {
   }
   const dateTd = dom.window.document.querySelectorAll('table > tbody > tr > td:nth-child(2)');
   const descTd = dom.window.document.querySelectorAll('table > tbody > tr > td:nth-child(4)');
-  let holidays: Holiday[] = [];
+  let holidays: IHoliday[] = [];
   for (let i = 0; i < dateTd.length; i++) {
     const holiday = dateTd[i].innerHTML.split('<br>').map(e => {
       return {
         date: dayjs(`${year}年${e}`, 'YYYY年M月D日'),
         des: descTd[i].textContent,
-      } as Holiday;
+      } as IHoliday;
     });
     holidays = holidays.concat(holiday);
   }
   return holidays;
 }
 
-function findHoliday(day: dayjs.Dayjs, holidays: Holiday[]) {
+function findHoliday(day: dayjs.Dayjs, holidays: IHoliday[]) {
   return holidays.find(e => e.date.isSame(day));
 }
 
@@ -70,11 +70,11 @@ export async function checkHoliday(date: string) {
     return {
       des: holiday.des,
       isHoliday: true,
-    } as CheckHoliday;
+    } as ICheckHoliday;
   } else {
     return {
       des: '',
       isHoliday: false,
-    } as CheckHoliday;
+    } as ICheckHoliday;
   }
 }
