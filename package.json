@@ -13,7 +13,7 @@
     "lint": "tslint -p tsconfig.json",
     "coverage": "nyc ava | coveralls",
     "commit": "git-cz",
-    "release": "standard-version"
+    "semantic-release": "semantic-release"
   },
   "config": {
     "commitizen": {
@@ -52,7 +52,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bigtongue5566/twstockjs.git"
+    "url": "https://github.com/bigtongue5566/twstockjs.git"
   },
   "keywords": [
     "Taiwan",
@@ -72,7 +72,7 @@
     "nodemon": "^2.0.1",
     "nyc": "^14.1.1",
     "prettier": "^1.19.1",
-    "standard-version": "^7.0.1",
+    "semantic-release": "^15.13.31",
     "ts-node": "^8.5.4",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",

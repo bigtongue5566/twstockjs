@@ -1,8 +1,16 @@
-language : node_js
-node_js :
- - stable
+language: node_js
+node_js:
+  - node
 install:
- - npm install
+  - npm install
 script:
- - npm test
-after_success: npm run coverage
+  - npm test
+after_success:
+  - npm run coverage
+jobs:
+  include:
+    - stage: release
+      node_js: lts/*
+      deploy:
+        script:
+          - npx semantic-release
