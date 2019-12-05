@@ -6,7 +6,7 @@ test('test isHoliday', async t => {
   const holidayDate = '2019-10-10';
   const tradingDayDate = '2019-9-27';
   const invalidDate = '2019//15////40';
-  const noThisDate = '2020/10/10';
+  const noThisDate = '2999/10/10';
   // act
   const holidayResult = await isHoliday(holidayDate);
   const tradingDayResult = await isHoliday(tradingDayDate);
