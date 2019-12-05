@@ -101,3 +101,5 @@ public
 lib/
 
 .coveralls.yml
+
+package-lock.json
