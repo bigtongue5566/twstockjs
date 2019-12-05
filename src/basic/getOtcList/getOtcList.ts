@@ -15,12 +15,8 @@ export async function getOtcList() {
   const otcList: IStock[] = [];
   const selector = 'body > table.h4 > tbody > tr > td:nth-child(1):not([colspan="7"]):not([bgcolor="#D5FFD5"])';
   document.querySelectorAll(selector).forEach(e => {
-    if (e && e.textContent) {
-      const stockArr = e.textContent.trim().split('　');
-      otcList.push({ code: stockArr[0].trim(), name: stockArr[1].trim().toLowerCase(), type: 'otc' });
-    } else {
-      throw new Error('response web document error');
-    }
+    const stockArr = e!.textContent!.trim().split('　');
+    otcList.push({ code: stockArr[0].trim(), name: stockArr[1].trim().toLowerCase(), type: 'otc' });
   });
   return otcList;
 }
