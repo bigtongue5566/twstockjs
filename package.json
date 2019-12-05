@@ -67,24 +67,24 @@
   "devDependencies": {
     "ava": "^2.4.0",
     "commitizen": "^4.0.3",
-    "coveralls": "^3.0.6",
+    "coveralls": "^3.0.9",
     "cz-conventional-changelog": "^3.0.2",
     "nodemon": "^2.0.1",
     "nyc": "^14.1.1",
-    "prettier": "^1.18.2",
-    "standard-version": "^7.0.0",
-    "ts-node": "^8.4.1",
-    "tslint": "^5.20.0",
+    "prettier": "^1.19.1",
+    "standard-version": "^7.0.1",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.3"
+    "typescript": "^3.7.3"
   },
   "dependencies": {
     "@types/jsdom": "^12.2.4",
     "axios": "^0.19.0",
-    "dayjs": "^1.8.16",
+    "dayjs": "^1.8.17",
     "iconv-lite": "^0.5.0",
-    "jsdom": "^15.1.1",
-    "query-string": "^6.8.3"
+    "jsdom": "^15.2.1",
+    "query-string": "^6.9.0"
   },
   "files": [
     "lib/**/*"
