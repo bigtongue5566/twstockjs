@@ -16,7 +16,11 @@ npm i twstockjs
 ## Usage
 
 ```javascript
-const {Basic,TradingDay} = require('twstockjs');
+const { Basic, TradingDay } = require('twstockjs');
+```
+
+```typescript
+import { Basic, TradingDay } from 'twstockjs';
 ```
 
 ## API
@@ -25,13 +29,19 @@ const {Basic,TradingDay} = require('twstockjs');
 
 #### getTseList()
 
+取得上市證券清單
+
 return Pomise\<IStock[]\>
 
 #### getOtcList()
 
+取得上櫃證券清單
+
 return Pomise\<IStock[]\>
 
 #### getTseAndOtcList()
+
+取得上市櫃證券清單
 
 return Pomise\<IStock[]\>
 
@@ -39,42 +49,20 @@ return Pomise\<IStock[]\>
 
 #### isTradingDay('yyyy-mm-dd')
 
+判斷是否為交易日
+
 return promise\<boolean\>
 
 #### checkTradingDay('yyyy-mm-dd')
 
+檢查是否為交易日
+
 return promise\<ITradingDay\>
-
-## Interface
-
-### IStock
-
-```
-{
-  // stock code
-  code: string,
-  // stock name
-  name: string,
-  // stock type 'tse' or 'otc'
-  type: string
-}
-```
-
-### ITradingDay
-
-```
-{
-  // If the date is a Trading Day
-  isTradingDay: boolean,
-  // The description of the date
-  des: string
-}
-```
 
 ## TODO
 
 - [x] 上市櫃清單
 
-- [ ] 公司基本資料
+- [x] 公司基本資料
 
 - [ ] 即時資料
