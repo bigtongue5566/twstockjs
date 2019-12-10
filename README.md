@@ -18,7 +18,7 @@ npm i twstockjs
 ## Usage
 
 ```javascript
-const { Basic } = require('twstockjs');
+const { Basic, Realtime } = require('twstockjs');
 ```
 
 ## API
@@ -42,9 +42,9 @@ const { Basic } = require('twstockjs');
 取得公司資料
 
 ```javascript
-await basic.getCorpInfo('2330');
-await basic.getCorpInfo('台積電');
-await basic.getCorpInfo('0050'); // null
+await Basic.getCorpInfo('2330');
+await Basic.getCorpInfo('台積電');
+await Basic.getCorpInfo('0050'); // null
 ```
 
 #### `isTradingDay(string)`
@@ -60,7 +60,7 @@ await basic.getCorpInfo('0050'); // null
 #### `getByStock(IStock)`
 
 ```javascript
-  const realtimeData = await getByStock({
+  const realtimeData = await Realtime.getByStock({
     code: '2330',
     name: '台積電', // 可有可無
     type: 'tse',
