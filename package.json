@@ -17,15 +17,15 @@
   },
   "release": {
     "plugins": [
-     "@semantic-release/commit-analyzer",
-     "@semantic-release/release-notes-generator",
-     "@semantic-release/npm",
-     "@semantic-release/changelog",
-     "@semantic-release/git",
-     "@semantic-release/github"
-   ],
-   "branch": "master"
- },
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      "@semantic-release/changelog",
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ],
+    "branch": "master"
+  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
@@ -76,6 +76,8 @@
   },
   "homepage": "https://github.com/bigtongue5566/twstockjs#readme",
   "devDependencies": {
+    "@semantic-release/changelog": "^3.0.6",
+    "@semantic-release/git": "^7.0.18",
     "ava": "^2.4.0",
     "commitizen": "^4.0.3",
     "coveralls": "^3.0.9",
