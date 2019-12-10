@@ -1,6 +1,6 @@
 {
   "name": "twstockjs",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "description": "Taiwan stock library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,6 +15,17 @@
     "commit": "git-cz",
     "semantic-release": "semantic-release"
   },
+  "release": {
+    "plugins": [
+     "@semantic-release/commit-analyzer",
+     "@semantic-release/release-notes-generator",
+     "@semantic-release/npm",
+     "@semantic-release/changelog",
+     "@semantic-release/git",
+     "@semantic-release/github"
+   ],
+   "branch": "master"
+ },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-conventional-changelog"
