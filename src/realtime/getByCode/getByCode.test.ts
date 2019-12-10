@@ -2,10 +2,10 @@ import test from 'ava';
 import { getByCode } from './getByCode';
 
 test('get 2330 realtime data', async t => {
-  const realTimeData = await getByCode({
+  const realtimeData = await getByCode({
     code: '2330',
     name: '',
     type: 'tse',
   });
-  t.is(realTimeData.name, '台積電');
+  t.is(realtimeData.name, '台積電');
 });

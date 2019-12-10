@@ -55,12 +55,12 @@ await basic.getCorpInfo('0050'); // null
 
 檢查是否為交易日
 
-### RealTime
+### Realtime
 
 #### `getByStock(IStock)`
 
 ```javascript
-  const realTimeData = await getByStock({
+  const realtimeData = await getByStock({
     code: '2330',
     name: '台積電', // 可有可無
     type: 'tse',

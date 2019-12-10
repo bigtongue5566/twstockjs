@@ -1,4 +1,4 @@
-export interface IRealTimeData {
+export interface IRealtimeData {
   dateTime: Date;
   name: string;
   code: string;

@@ -1,1 +1,1 @@
-export * from './IRealTimeData';
+export * from './IRealtimeData';
