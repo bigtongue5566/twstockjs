@@ -3,17 +3,9 @@ import customParseFormat from 'dayjs/plugin/customParseFormat';
 dayjs.extend(customParseFormat);
 import axios from 'axios';
 import jsdom from 'jsdom';
+import { ICheckHoliday, IHoliday } from './interface';
+
 const { JSDOM } = jsdom;
-
-interface IHoliday {
-  date: dayjs.Dayjs;
-  des: string;
-}
-
-interface ICheckHoliday {
-  isHoliday: boolean;
-  des: string;
-}
 
 async function getStockHolidays(year: number) {
   const url = 'https://www.twse.com.tw/holidaySchedule/holidaySchedule';

@@ -1,2 +1,2 @@
 import isWeekend from './isWeekend';
-export = isWeekend;
+export default isWeekend;

@@ -5,6 +5,7 @@
 [![Coveralls github](https://img.shields.io/coveralls/github/bigtongue5566/twstockjs)](https://coveralls.io/github/bigtongue5566/twstockjs)
 [![Gitter](https://img.shields.io/gitter/room/bigtongue5566/twstockjs)](https://gitter.im/twstockjs/community)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8075958aa3b64d849ed4ea54321bb524)](https://www.codacy.com/manual/bigtongue5566/twstockjs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bigtongue5566/twstockjs&amp;utm_campaign=Badge_Grade)
+![David](https://img.shields.io/david/bigtongue5566/twstockjs)
 
 台股資料library
 
@@ -17,48 +18,42 @@ npm i twstockjs
 ## Usage
 
 ```javascript
-const { Basic, TradingDay } = require('twstockjs');
-```
-
-```typescript
-import { Basic, TradingDay } from 'twstockjs';
+const { Basic } = require('twstockjs');
 ```
 
 ## API
 
 ### Basic
 
-#### getTseList()
+#### `getTseList()`
 
 取得上市證券清單
 
-return Pomise\<IStock[]\>
-
-#### getOtcList()
+#### `getOtcList()`
 
 取得上櫃證券清單
 
-return Pomise\<IStock[]\>
-
-#### getTseAndOtcList()
+#### `getTseAndOtcList()`
 
 取得上市櫃證券清單
 
-return Pomise\<IStock[]\>
+#### `getCorpInfo(string)`
 
-### TradingDay
+取得公司資料
 
-#### isTradingDay('yyyy-mm-dd')
+```javascript
+await basic.getCorpInfo('2330');
+await basic.getCorpInfo('台積電');
+await basic.getCorpInfo('0050'); // null
+```
+
+#### `isTradingDay(string)`
 
 判斷是否為交易日
 
-return promise\<boolean\>
-
-#### checkTradingDay('yyyy-mm-dd')
+#### `checkTradingDay(string)`
 
 檢查是否為交易日
-
-return promise\<ITradingDay\>
 
 ## TODO
 

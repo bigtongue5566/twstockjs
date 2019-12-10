@@ -1,16 +1,12 @@
+import { ITradingDay } from './interface';
 import isWeekend from './isWeekend';
 import { checkHoliday, isHoliday } from './stockHoliday';
 
-interface ITradingDay {
-  isTradingDay: boolean;
-  des: string;
-}
-
-async function isTradingDay(dateStr: string) {
+export async function isTradingDay(dateStr: string) {
   return !isWeekend(dateStr) && !(await isHoliday(dateStr));
 }
 
-async function checkTradingDay(dateStr: string) {
+export async function checkTradingDay(dateStr: string) {
   if (isWeekend(dateStr)) {
     return { isTradingDay: false, des: 'Weekend' } as ITradingDay;
   } else {
@@ -22,5 +18,3 @@ async function checkTradingDay(dateStr: string) {
     }
   }
 }
-
-export { isTradingDay, checkTradingDay };

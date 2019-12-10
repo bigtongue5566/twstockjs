@@ -3,7 +3,7 @@ import jsdom from 'jsdom';
 import queryString from 'query-string';
 const { JSDOM } = jsdom;
 
-interface IStockInfo {
+interface ICorpInfo {
   code: string;
   classification: string;
   corpFullName: string;
@@ -12,7 +12,7 @@ interface IStockInfo {
   chairman: string;
 }
 
-function tryParseStockInfo(document: Document): IStockInfo | null {
+function tryParseStockInfo(document: Document): ICorpInfo | null {
   const notFoundElement = document.querySelector('body > center > h3');
   if (notFoundElement) {
     return null;
@@ -41,7 +41,7 @@ function tryParseStockInfo(document: Document): IStockInfo | null {
   return { code, classification, corpFullName, address, createdAt, chairman };
 }
 
-export async function getStockInfoByCode(stockCode: string): Promise<IStockInfo | null> {
+export async function getStockInfoByCode(stockCode: string): Promise<ICorpInfo | null> {
   const url = 'https://mops.twse.com.tw/mops/web/ajax_t05st03';
   const data = queryString.stringify({
     TYPEK: 'all',

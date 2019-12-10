@@ -1,5 +1,5 @@
 import test from 'ava';
-import { getStockInfoByCode } from './getStockInfoByCode';
+import { getStockInfoByCode } from './getCorpInfo';
 
 test('get 2330 stockInfo', async t => {
   const stockInfo = await getStockInfoByCode('2330');
