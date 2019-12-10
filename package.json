@@ -1,6 +1,6 @@
 {
   "name": "twstockjs",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Taiwan stock library",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -25,7 +25,10 @@
       [
         "@semantic-release/git",
         {
-          "assets": ["CHANGELOG.md", "package.json"]
+          "assets": [
+            "CHANGELOG.md",
+            "package.json"
+          ]
         }
       ]
     ],
