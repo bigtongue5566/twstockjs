@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/bigtongue5566/twstockjs/compare/v0.2.0...v0.3.0) (2019-12-10)
+
+
+### Features
+
+* **realtime:** add getByStock() ([3ebece7](https://github.com/bigtongue5566/twstockjs/commit/3ebece707e131cd67e45339cb13eab4e8f46e615))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
