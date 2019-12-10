@@ -55,10 +55,22 @@ await basic.getCorpInfo('0050'); // null
 
 檢查是否為交易日
 
+### RealTime
+
+#### `getByStock(IStock)`
+
+```javascript
+  const realTimeData = await getByStock({
+    code: '2330',
+    name: '台積電', // 可有可無
+    type: 'tse',
+  });
+```
+
 ## TODO
 
 - [x] 上市櫃清單
 
 - [x] 公司基本資料
 
-- [ ] 即時資料
+- [x] 即時資料
