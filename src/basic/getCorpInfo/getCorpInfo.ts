@@ -12,7 +12,7 @@ interface ICorpInfo {
   chairman: string;
 }
 
-function tryParseStockInfo(document: Document): ICorpInfo | null {
+function tryParseCorpInfo(document: Document): ICorpInfo | null {
   const notFoundElement = document.querySelector('body > center > h3');
   if (notFoundElement) {
     return null;
@@ -41,7 +41,7 @@ function tryParseStockInfo(document: Document): ICorpInfo | null {
   return { code, classification, corpFullName, address, createdAt, chairman };
 }
 
-export async function getStockInfoByCode(stockCode: string): Promise<ICorpInfo | null> {
+export async function getCorpInfoByCode(stockCode: string): Promise<ICorpInfo | null> {
   const url = 'https://mops.twse.com.tw/mops/web/ajax_t05st03';
   const data = queryString.stringify({
     TYPEK: 'all',
@@ -55,5 +55,5 @@ export async function getStockInfoByCode(stockCode: string): Promise<ICorpInfo |
   });
   const res = await axios.post(url, data);
   const { document } = new JSDOM(res.data).window;
-  return tryParseStockInfo(document);
+  return tryParseCorpInfo(document);
 }
