@@ -1,3 +1,11 @@
+## [0.3.1](https://github.com/bigtongue5566/twstockjs/compare/v0.3.0...v0.3.1) (2019-12-10)
+
+
+### Bug Fixes
+
+* **realtime:** fix missing export ([cc7b936](https://github.com/bigtongue5566/twstockjs/commit/cc7b936ef5624454bdd6a48cb9dbcf0d22640c61))
+* **realtime:** rename file ([4c8aeb3](https://github.com/bigtongue5566/twstockjs/commit/4c8aeb35e209eb7c668302ea6e22a54ba13db7a8))
+
 # [0.3.0](https://github.com/bigtongue5566/twstockjs/compare/v0.2.0...v0.3.0) (2019-12-10)
 
 
