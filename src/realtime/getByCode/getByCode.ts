@@ -1,12 +1,32 @@
 import axios from 'axios';
-import { IStock } from '../../basic/interfaces';
 import { IRealtimeData } from '../interfaces';
+const DATA_NOT_FOUND = 'Data Not Found';
 
-export async function getByCode(stock: IStock): Promise<IRealtimeData> {
+function isDataNotFound(message: string): boolean {
+  return message === 'Information Data Not Found';
+}
+
+/**
+ *
+ *
+ * @export
+ * @param {string} code
+ * 股票代碼
+ * @param {('tse' | 'otc')} type
+ * tse:上市 otc:上櫃
+ * @returns {Promise<IRealtimeData>}
+ */
+export async function getByCode(code: string, type: 'tse' | 'otc'): Promise<IRealtimeData> {
   const now = Date.now();
-  const url = `http://163.29.17.179/stock/api/getStockInfo.jsp?ex_ch=${stock.type}_${stock.code}.tw&json=1&delay=0&_=${now}`;
+  const url = `http://163.29.17.179/stock/api/getStockInfo.jsp?ex_ch=${type}_${code}.tw&json=1&delay=0&_=${now}`;
   const res = await axios.get(url);
-  const realtimeData = res.data.msgArray[0];
+  if (isDataNotFound(res.data?.rtmessage)) {
+    throw Error(DATA_NOT_FOUND);
+  }
+  const realtimeData = res.data.msgArray[0]
+  if (realtimeData === undefined) {
+    throw Error(DATA_NOT_FOUND);
+  }
   const change = +realtimeData.z - +realtimeData.y;
   const percentChange = Math.round((change / +realtimeData.y) * 100 * 100) / 100;
   const bestBidPrice = realtimeData.b

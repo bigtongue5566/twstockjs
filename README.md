@@ -60,11 +60,7 @@ await Basic.getCorpInfo('0050'); // null
 #### `getByStock(IStock)`
 
 ```javascript
-  const realtimeData = await Realtime.getByStock({
-    code: '2330',
-    name: '台積電', // 可有可無
-    type: 'tse',
-  });
+  const realtimeData = await Realtime.getByStock('2330', 'tse'});
 ```
 
 ## TODO
