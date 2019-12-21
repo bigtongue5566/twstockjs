@@ -1,3 +1,16 @@
+# [0.4.0](https://github.com/bigtongue5566/twstockjs/compare/v0.3.2...v0.4.0) (2019-12-21)
+
+
+### Bug Fixes
+
+* **realtime:** throw error while data not found ([33dab49](https://github.com/bigtongue5566/twstockjs/commit/33dab4909eb0c14fd296839f7578851021b1a2bf))
+
+
+### Features
+
+* **basic:** add getStockList instead of others ([9c1ef49](https://github.com/bigtongue5566/twstockjs/commit/9c1ef49f4d13ba9d69198ef0dc7f19400391367b))
+* **realtime:** add getByStock and getByStocks instead of getByCode ([ec05836](https://github.com/bigtongue5566/twstockjs/commit/ec058362c4a4bf42a4f2c83fa1ae755b42d1f0f4))
+
 ## [0.3.2](https://github.com/bigtongue5566/twstockjs/compare/v0.3.1...v0.3.2) (2019-12-19)
 
 
