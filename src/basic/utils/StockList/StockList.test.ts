@@ -4,8 +4,10 @@ import { StockList } from './StockList';
 let stockList: StockList;
 
 test.before(t => {
-  stockList = new StockList();
-  stockList.push({ code: '2330', name: '台積電', type: 'tse' }, { code: '2454', name: '聯發科', type: 'tse' });
+  stockList = new StockList(
+    { code: '2330', name: '台積電', type: 'tse' },
+    { code: '2454', name: '聯發科', type: 'tse' },
+  );
 });
 
 test('test StockList getByCode', t => {

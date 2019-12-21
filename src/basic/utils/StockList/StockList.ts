@@ -1,8 +1,8 @@
 import { IStock } from '../../../interfaces';
 
 export class StockList extends Array<IStock> {
-  constructor() {
-    super();
+  constructor(...items: IStock[]) {
+    super(...items);
     // Set the prototype explicitly.
     Object.setPrototypeOf(this, StockList.prototype);
   }
