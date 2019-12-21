@@ -1,3 +1,10 @@
+## [0.4.1](https://github.com/bigtongue5566/twstockjs/compare/v0.4.0...v0.4.1) (2019-12-21)
+
+
+### Bug Fixes
+
+* **basic:** use as instead of undefined check ([5c374f4](https://github.com/bigtongue5566/twstockjs/commit/5c374f459dea7e68a24f0aa3e69ba57165279705))
+
 # [0.4.0](https://github.com/bigtongue5566/twstockjs/compare/v0.3.2...v0.4.0) (2019-12-21)
 
 
