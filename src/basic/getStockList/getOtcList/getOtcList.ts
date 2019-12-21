@@ -6,7 +6,7 @@ import { StockList } from '../../utils';
 const { JSDOM } = jsdom;
 const url = 'http://isin.twse.com.tw/isin/C_public.jsp?strMode=4';
 
-export async function getOtcList() :Promise<StockList>{
+export async function getOtcList(): Promise<StockList> {
   const res = await axios.get(url, {
     responseType: 'arraybuffer',
   });

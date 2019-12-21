@@ -16,6 +16,6 @@ export class StockList extends Array<IStock> {
     return this.find(e => e.name === name);
   }
   public getByNames(names: string[]) {
-    return this.filter(e =>names.includes(e.name as string));
+    return this.filter(e => names.includes(e.name as string));
   }
 }

@@ -1,7 +1,7 @@
-import ava from 'ava';
+import test from 'ava';
 import isWeekend from './isWeekend';
 
-ava('test isWeekend', t => {
+test('test isWeekend', t => {
   // arrange
   const weekendDateCase1 = '2019-9-28';
   const weekendDateCase2 = '2019/9/29';

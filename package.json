@@ -53,7 +53,8 @@
       "src/**/*.ts"
     ],
     "exclude": [
-      "**/*.d.ts"
+      "**/*.d.ts",
+      "**/*.test.ts"
     ],
     "extension": [
       ".ts"
