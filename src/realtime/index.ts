@@ -1,1 +1,1 @@
-export * from './getByCode';
+export * from './getByStocks';
