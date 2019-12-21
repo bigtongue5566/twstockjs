@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/bigtongue5566/twstockjs/compare/v0.3.1...v0.3.2) (2019-12-19)
+
+
+### Bug Fixes
+
+* **basic:** rm extra non-null assertion operator ([c9990c7](https://github.com/bigtongue5566/twstockjs/commit/c9990c74362e0f8ff0f52a0b6a4c9b66c7081bc4))
+
 ## [0.3.1](https://github.com/bigtongue5566/twstockjs/compare/v0.3.0...v0.3.1) (2019-12-10)
 
 
