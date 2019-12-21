@@ -25,17 +25,29 @@ const { Basic, Realtime } = require('twstockjs');
 
 ### Basic
 
-#### `getTseList()`
+#### `getStockList()`
+
+取得上市上櫃證券清單
+
+```javascript
+const stockList = await getStockList();
+stockList.get('2330');
+stockList.get('3260');
+```
 
 取得上市證券清單
 
-#### `getOtcList()`
+```javascript
+const stockList = await getStockList('tse');
+stockList.get('2330');
+```
 
 取得上櫃證券清單
 
-#### `getTseAndOtcList()`
-
-取得上市櫃證券清單
+```javascript
+const stockList = await getStockList('otc');
+stockList.get('3260');
+```
 
 #### `getCorpInfo(string)`
 
@@ -51,22 +63,49 @@ await Basic.getCorpInfo('0050'); // null
 
 判斷是否為交易日
 
+```javascript
+isTradingDay('2019/12/21'); // false
+```
+
 #### `checkTradingDay(string)`
 
 檢查是否為交易日
+
+```javascript
+checkTradingDay('2019/12/21');
+/*
+{
+  isTradingDay: false,
+  des: 'weekend'
+}
+*/
+```
 
 ### Realtime
 
 #### `getByStock(IStock)`
 
 ```javascript
-  const realtimeData = await Realtime.getByStock('2330', 'tse'});
+  const realtimeData =
+    await getByStock({code:'2330', type:'tse'});
+  // or
+  const stock = stockList.getByCode('2330');
+  const realtimeData = await getByStock(stock);
+```
+
+#### `getByStocks(IStock[])`
+
+```javascript
+  const realtimeData = await getByStocks([
+    {code:'2330', type:'tse'},
+    {code:'3260', type:'otc'}
+  ]);
 ```
 
 ## TODO
 
 - [x] 上市櫃清單
-
 - [x] 公司基本資料
-
 - [x] 即時資料
+- [ ] 歷史資料
+- [ ] 分析
