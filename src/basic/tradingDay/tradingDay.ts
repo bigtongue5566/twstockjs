@@ -8,7 +8,7 @@ export async function isTradingDay(dateStr: string) {
 
 export async function checkTradingDay(dateStr: string) {
   if (isWeekend(dateStr)) {
-    return { isTradingDay: false, des: 'Weekend' } as ITradingDay;
+    return { isTradingDay: false, des: 'weekend' } as ITradingDay;
   } else {
     const holiday = await checkHoliday(dateStr);
     if (holiday.isHoliday) {
