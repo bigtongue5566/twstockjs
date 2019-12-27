@@ -47,3 +47,11 @@ export function parseData(data: any): IRealtimeData {
     volume: +data.v,
   };
 }
+
+export function delay(interval: number) {
+  return new Promise((resolve) => {
+      setTimeout(()=>{
+        resolve();
+      }, interval);
+  });
+};

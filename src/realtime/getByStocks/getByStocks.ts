@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { IStock } from '../../interfaces';
-import { IRealtimeData } from '../interfaces';
 import { generateUrl, parseData } from '../utils';
 
 export async function getByStocks(stocks: IStock[]) {
