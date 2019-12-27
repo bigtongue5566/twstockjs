@@ -10,6 +10,14 @@ test.before(t => {
   );
 });
 
+test('test StockList constructor', t => {
+  stockList = new StockList(
+    { code: '2330', name: '台積電', type: 'tse' },
+    { code: '2454', name: '聯發科', type: 'tse' },
+  );
+  t.is(stockList.length, 2);
+});
+
 test('test StockList getByCode', t => {
   const stock = stockList.getByCode('2330');
   t.is(stock!.code, '2330');
