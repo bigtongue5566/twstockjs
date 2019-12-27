@@ -31,7 +31,7 @@ const { Basic, Realtime } = require('twstockjs');
 取得上市上櫃證券清單
 
 ```javascript
-const stockList = await getStockList();
+const stockList = await Basic.getStockList();
 stockList.get('2330');
 stockList.get('3260');
 ```
@@ -39,14 +39,14 @@ stockList.get('3260');
 取得上市證券清單
 
 ```javascript
-const stockList = await getStockList('tse');
+const stockList = await Basic.getStockList('tse');
 stockList.get('2330');
 ```
 
 取得上櫃證券清單
 
 ```javascript
-const stockList = await getStockList('otc');
+const stockList = await Basic.getStockList('otc');
 stockList.get('3260');
 ```
 
@@ -84,20 +84,10 @@ checkTradingDay('2019/12/21');
 
 ### Realtime
 
-#### `getByStock(IStock)`
-
-```javascript
-  const realtimeData =
-    await getByStock({code:'2330', type:'tse'});
-  // or
-  const stock = stockList.getByCode('2330');
-  const realtimeData = await getByStock(stock);
-```
-
 #### `getByStocks(IStock[])`
 
 ```javascript
-  const realtimeData = await getByStocks([
+  const realtimeData = await Realtime.getByStocks([
     {code:'2330', type:'tse'},
     {code:'3260', type:'otc'}
   ]);
