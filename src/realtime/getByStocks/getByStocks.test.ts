@@ -1,5 +1,5 @@
 import test from 'ava';
-import { delay } from '../utils';
+import { delay } from '../../utils';
 import { getByStocks } from './getByStocks';
 
 test.serial('get 2330 realtime data', async t => {
