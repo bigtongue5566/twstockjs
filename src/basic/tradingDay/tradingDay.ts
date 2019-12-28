@@ -1,4 +1,4 @@
-import { ITradingDay } from './interface';
+import { ITradingDay } from './interfaces';
 import isWeekend from './isWeekend';
 import { checkHoliday, isHoliday } from './stockHoliday';
 
