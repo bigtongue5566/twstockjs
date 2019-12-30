@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/bigtongue5566/twstockjs/compare/v0.4.1...v0.5.0) (2019-12-30)
+
+
+### Features
+
+* **history:** add history module ([0dc9fbf](https://github.com/bigtongue5566/twstockjs/commit/0dc9fbf078c6df4206240ed3b4c4b654db979004))
+
 ## [0.4.1](https://github.com/bigtongue5566/twstockjs/compare/v0.4.0...v0.4.1) (2019-12-21)
 
 
