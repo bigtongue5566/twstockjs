@@ -7,6 +7,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8075958aa3b64d849ed4ea54321bb524)](https://www.codacy.com/manual/bigtongue5566/twstockjs?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bigtongue5566/twstockjs&amp;utm_campaign=Badge_Grade)
 ![David](https://img.shields.io/david/bigtongue5566/twstockjs)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=bigtongue5566_twstockjs&metric=alert_status)](https://sonarcloud.io/dashboard?id=bigtongue5566_twstockjs)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 台股資料library
 
@@ -32,22 +33,18 @@ const { Basic, Realtime } = require('twstockjs');
 
 ```javascript
 const stockList = await Basic.getStockList();
-stockList.get('2330');
-stockList.get('3260');
 ```
 
 取得上市證券清單
 
 ```javascript
 const stockList = await Basic.getStockList('tse');
-stockList.get('2330');
 ```
 
 取得上櫃證券清單
 
 ```javascript
 const stockList = await Basic.getStockList('otc');
-stockList.get('3260');
 ```
 
 #### `getCorpInfo(string)`
@@ -65,7 +62,7 @@ await Basic.getCorpInfo('0050'); // null
 判斷是否為交易日
 
 ```javascript
-isTradingDay('2019/12/21'); // false
+await Basic.isTradingDay('2019/12/21'); // false
 ```
 
 #### `checkTradingDay(string)`
@@ -73,7 +70,7 @@ isTradingDay('2019/12/21'); // false
 檢查是否為交易日
 
 ```javascript
-checkTradingDay('2019/12/21');
+await Basic.checkTradingDay('2019/12/21');
 /*
 {
   isTradingDay: false,
@@ -87,16 +84,19 @@ checkTradingDay('2019/12/21');
 #### `getByStocks(IStock[])`
 
 ```javascript
-  const realtimeData = await Realtime.getByStocks([
-    {code:'2330', type:'tse'},
-    {code:'3260', type:'otc'}
-  ]);
+const realtimeData = await Realtime.getByStocks([
+  {code:'2330', type:'tse'},
+  {code:'3260', type:'otc'}
+]);
 ```
 
-## TODO
+### History
 
-- [x] 上市櫃清單
-- [x] 公司基本資料
-- [x] 即時資料
-- [ ] 歷史資料
-- [ ] 分析
+#### `get(code, year, month)`
+
+```javascript
+const realtimeData = await History.get(
+  '2330',
+  2019,
+  12);
+```
