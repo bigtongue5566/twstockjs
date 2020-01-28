@@ -85,7 +85,7 @@
   "homepage": "https://github.com/bigtongue5566/twstockjs#readme",
   "devDependencies": {
     "@semantic-release/changelog": "^3.0.6",
-    "@semantic-release/git": "^8.0.0",
+    "@semantic-release/git": "^9.0.0",
     "ava": "^3.0.0",
     "commitizen": "^4.0.3",
     "coveralls": "^3.0.9",
