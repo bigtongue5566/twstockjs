@@ -101,7 +101,7 @@
   },
   "dependencies": {
     "@types/jsdom": "^21.1.2",
-    "axios": "^0.21.1",
+    "axios": "^1.5.0",
     "dayjs": "^1.8.17",
     "iconv-lite": "^0.6.2",
     "jsdom": "^16.0.0",
