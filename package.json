@@ -100,7 +100,7 @@
     "typescript": "^5.2.2"
   },
   "dependencies": {
-    "@types/jsdom": "^16.1.0",
+    "@types/jsdom": "^21.1.2",
     "axios": "^0.21.1",
     "dayjs": "^1.8.17",
     "iconv-lite": "^0.6.2",
